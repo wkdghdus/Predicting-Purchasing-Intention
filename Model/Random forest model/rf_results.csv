@@ -1,0 +1,2 @@
+model,accuracy,precision,recall,f1,roc_auc,best_n_estimators,best_max_depth,best_min_samples_split
+RandomForest_GridSearchCV,0.8913219789132197,0.646551724137931,0.6555944055944056,0.6510416666666666,0.9206678355223286,300,,10
