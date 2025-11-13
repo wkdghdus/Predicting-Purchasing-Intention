@@ -37,52 +37,52 @@
 % Title and Authors (translated from main.tex)
 % ============================================================================
 
-\title{Predicting Online Shoppers’ Purchasing Intention}
+\title{\textbf{Predicting Online Shoppers' Purchasing Intention}}
 
 \author{%
-\IEEEauthorblockN{Anthony Stefanuto}
-\IEEEauthorblockA{Computer Science\\
+\IEEEauthorblockN{\textbf{Anthony Stefanuto}}
+\IEEEauthorblockA{\textit{Computer Science}\\
 Western University}
 \and
-\IEEEauthorblockN{Luke Jang}
-\IEEEauthorblockA{Computer Science\\
+\IEEEauthorblockN{\textbf{Luke Jang}}
+\IEEEauthorblockA{\textit{Computer Science}\\
 Western University}
 \and
-\IEEEauthorblockN{Aimee Tang}
-\IEEEauthorblockA{Statistics\\
+\IEEEauthorblockN{\textbf{Aimee Tang}}
+\IEEEauthorblockA{\textit{Statistics}\\
 Western University}
 \and
-\IEEEauthorblockN{Nicol Elias}
-\IEEEauthorblockA{Statistics\\
+\IEEEauthorblockN{\textbf{Nicol Elias}}
+\IEEEauthorblockA{\textit{Statistics}\\
 Western University}
 }
 
 \begin{document}
-
 \maketitle
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract} 
-How to conceal objects from electromagnetic radiation has been a hot research topic. Radar is an object detection system that uses Radio waves to determine the range , angle, or velocity. A radar transmit radio waves or microwaves that reflect from any object in their path. A receive radar is typically the same system as transmit radar, receives and processes these reflected wave to determine properties of object. Different organizations are working onto hide object from the radar in outer space. Any confidential object can be taken through space without being detected by the enemies. This calls for necessity of devising new method to conceal an object electromagnetically. 
+Predicting purchasing intention in e-commerce is crucial for optimizing marketing strategies and improving conversion rates. This study presents a comprehensive machine learning approach to classify online shopping sessions as purchase or non-purchase. Using the UCI Online Shoppers Purchasing Intention Dataset, we approached the challenge of predicting user behavior from metrics including page views, session duration, bounce rates, and visitor characteristics. Our methodology involves extensive exploratory data analysis to identify key behavioral patterns, followed by systematic feature engineering and preprocessing to handle the imbalanced dataset. We implement and compare multiple classification algorithms, including Logistic Regression, Decision Trees, Random Forest, and XGBoost. Our results show that the Random Forest model achieves the highest overall performance across accuracy, F1-score, and ROC-AUC. Feature analysis reveals that engagement attributes such as \textit{ProductRelated\_Duration}, \textit{BounceRates}, and \textit{Total\_Time} are the strongest predictors of purchase behavior. These findings demonstrate the value of behavioral metrics and machine learning in understanding online purchasing decisions, providing a practical basis for identifying high-intent shoppers and improving conversion strategies.
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction}
-
+\section{\textbf{Introduction}}
 The growth of e-commerce platforms depends heavily on how businesses interact with consumers. These interactions create copious amounts of behavioural and transactional data. Comprehension of this information creates opportunities to improve market strategies, increasing conversion rates. A predictive analysis can help businesses allocate time and resources more efficiently. Targeting customers with a high purchase intention increases profits while reducing wasted advertising spend.
+
 The task of predicting customer purchase intention must be navigated cautiously. User behaviour on websites is highly variable and influenced by numerous factors, including browsing duration, the types of pages visited, and bounce rate. Conventional rules and analysis fail to capture advanced interactions and data correlations. This is where the implementation of machine learning (ML) models can identify patterns in data, facilitating data-driven business decisions.
-This study uses the Online Shoppers Purchasing Intention Dataset from the UCI Machine Learning Repository to classify user sessions as either purchase or non-purchase. Using this dataset, we investigate how user engagement metrics correlate with conversion rates. This study makes three main contributions:
-We conduct a comprehensive exploratory data analysis (EDA) to understand trends, correlations, and target variable relationships
 
+This study uses the Online Shoppers Purchasing Intention Dataset from the UCI Machine Learning Repository to classify user sessions as either purchase or non-purchase. Using this dataset, we investigate how user engagement metrics correlate with conversion rates.This study makes three main contributions:
 
-We implement and compare three machine learning models, including Logistic Regression, Decision Tree, and Random Forest, to evaluate their predictive performance.
+\begin{enumerate}
+    \item \textit{We conduct a comprehensive exploratory data analysis (EDA) to understand trends, correlations, and target variable relationships.}
+    \item \textit{We implement and compare three machine learning models, including Logistic Regression, Decision Tree, and Random Forest, to evaluate their predictive performance.}
+    \item \textit{We comprehend the key features driving purchase decisions, providing valuable insights for e-commerce platforms.}
+\end{enumerate}
 
-
-We comprehend the key features driving purchase decisions, providing valuable insights for e-commerce platforms.
 The remainder of this report is organized as follows. Section II discusses related research on purchase intention and online behavioural analytics. Section III details the dataset, preprocessing, and model design. Section IV presents and discusses experimental results, and Section V concludes with implications and potential directions for future work.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Related Work}
+\section{\textbf{Related Work}}
 
 Related Work
 Research on predicting online shoppers’ purchasing intentions has become increasingly important as e-commerce platforms strive to identify users most likely to make purchases. One of the main challenges in this field is developing models that are both accurate and interpretable while handling the class imbalance existing between purchasing and non-purchasing visits to websites.
@@ -95,11 +95,11 @@ In contrast, our study focuses on offline prediction and analysis of shopper beh
 In summary, while Baati and Mohsil (2020) demonstrated the effectiveness of Random Forest in real-time classification, our work extends this by emphasizing data-driven interpretation and feature understanding, combining prediction accuracy with practical insights.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Methodology / Proposed Method}
+\section{\textbf{Methodology / Proposed Method}}
 
 This section presents the complete modeling pipeline used in our project, including system architecture, data preprocessing, feature engineering, algorithm design, and model training. All hyperparameters used to train our models are explicitly listed to ensure full reproducibility.
 
-\subsection{System Architecture}
+\subsection{\textbf{System Architecture}}
 
 Our system follows a supervised learning workflow consisting of four major components:
 
@@ -155,7 +155,7 @@ Our system follows a supervised learning workflow consisting of four major compo
 \end{figure}
 
 
-\subsection{Data Preprocessing}
+\subsection{\textbf{Data Preprocessing}}
 
 \subsubsection{Exploratory Data Analysis}
 
@@ -266,7 +266,7 @@ ExitRates & BounceRates ($r = 0.91$) \\ \hline
 \label{tab:correlation_filtered}
 \end{table}
 
-\subsection{Algorithm Design}
+\subsection{\textbf{Algorithm Design}}
 
 We evaluated linear and nonlinear classifiers to compare interpretability and predictive power.
 
@@ -337,7 +337,7 @@ XGBClassifier(n_estimators=100,
               random_state=42)
 \end{lstlisting}
 
-\subsection{Model Training}
+\subsection{\textbf{Model Training}}
 
 All models were trained using the same protocol:
 
